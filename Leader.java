@@ -1,11 +1,11 @@
-package teambots;
+package ehi1vso2;
 
 import robocode.HitByBulletEvent;
 import robocode.ScannedRobotEvent;
 import robocode.TeamRobot;
 import java.util.ArrayList;
 
-public class LeaderBot extends TeamRobot{
+public class Leader extends TeamRobot{
 
     private ArrayList<EnemyBot> enemyBots = new ArrayList<>();
 
@@ -34,7 +34,7 @@ public class LeaderBot extends TeamRobot{
         for (int i = 0; i < enemyBots.size(); i++) {
 
             //if it is found call updateData function
-            if (event.getName().equals(enemyBots.get(i).name)){
+            if (event.getName().equals(enemyBots.get(i))){
                 enemyBots.get(i).updateData(event.getName(), event.getEnergy(), event.getBearing(), event.getDistance(), event.getHeading(), event.getVelocity());
                 found = true;
             }
@@ -173,3 +173,4 @@ public class LeaderBot extends TeamRobot{
         return null;
     }
 }
+

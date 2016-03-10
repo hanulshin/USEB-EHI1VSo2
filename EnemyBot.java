@@ -1,4 +1,4 @@
-package teambots;
+package ehi1vso2;
 
 public class EnemyBot implements Comparable<EnemyBot>{
 
